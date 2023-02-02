@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('avatar');
-            $table->string('github_id')->unique();
-            $table->string('github_username');
-            $table->string('email')->unique();
-            $table->rememberToken();
+        Schema::create('post_translations', function (Blueprint $table) {
+            $table->bigInteger('post_id')->unsigned();
+            $table->string('locale', 5);
+            $table->primary(['post_id', 'locale']);
+            
+            $table->string('post_title');
+            $table->text('post_content')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('post_translations');
     }
 };

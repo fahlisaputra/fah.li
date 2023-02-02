@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('avatar');
-            $table->string('github_id')->unique();
-            $table->string('github_username');
-            $table->string('email')->unique();
-            $table->rememberToken();
+            $table->integer('year');
+            $table->string('slug');
+            $table->text('thumbnail');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('activities');
     }
 };

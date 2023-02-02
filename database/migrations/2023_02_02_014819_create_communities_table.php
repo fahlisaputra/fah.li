@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('communities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('avatar');
-            $table->string('github_id')->unique();
-            $table->string('github_username');
-            $table->string('email')->unique();
-            $table->rememberToken();
+            $table->bigInteger('parent_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('communities');
     }
 };
