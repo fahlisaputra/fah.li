@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+    images: {
+        loader: 'custom',
+        loaderFile: './lib/image-loader.ts',
+        remotePatterns: [
+            { hostname: 'localhost' },
+            { hostname: 'fahli.dev' },
+            { hostname: 'cdn.fahli.dev' },
+        ],
+        qualities: [10, 20, 50, 75, 85, 90, 100],
+    },
+}
 
-export default nextConfig;
+export default nextConfig

@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 fah.li — Personal Link Gateway
 
-## Getting Started
+A minimal and elegant personal link gateway built with **Next.js 16**, **Tailwind CSS v4**, and
+**shadcn/ui**.  
+This serves as a modern alternative to Linktree — simple, fast, and privacy-friendly.
 
-First, run the development server:
+> Demo → [https://fah.li](https://fah.li)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer         | Stack                                                     |
+| ------------- | --------------------------------------------------------- |
+| Framework     | [Next.js 16 (App Router)](https://nextjs.org/)            |
+| Styling       | [Tailwind CSS v4](https://tailwindcss.com/)               |
+| UI Components | [shadcn/ui](https://ui.shadcn.com/)                       |
+| Icons         | [lucide-react](https://lucide.dev/)                       |
+| Theme         | [next-themes](https://github.com/pacocoursey/next-themes) |
+| Animation     | [motion/react](https://motion.dev/react)                  |
+| Analytics     | Vercel Analytics (default) / Plausible / Umami            |
+
+---
+
+## ⚙️ Setup & Development
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/fahlisaputra/fah.li.git
+cd fah.li
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+# or
+bun install
+```
+
+### 3️⃣ Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) 🎉
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧰 Environment Variables
 
-## Learn More
+Create a `.env.local` file if needed:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_CDN_URL=https://cdn.fahli.dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
+This project is licensed under the **MIT License**.  
+You’re free to use, modify, and share with attribution.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Author
+
+**Muhammad Fahli Saputra**  
+System Analyst & Software Engineer  
+🌍 [fahli.dev](https://fahli.dev)
+
+---
+
+## 💡 Inspiration
+
+The idea behind **fah.li** is to create a simple, personal, and expressive digital gateway —  
+less noise, more identity. Perfect for portfolios, indie hackers, and creators who value clean
+design.
+
+---
+
+> _"Minimal doesn’t mean less — it means better focus."_  
+> — Fahli Saputra
