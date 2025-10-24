@@ -1,5 +1,6 @@
 import { Globe, Mail, Medal, Calendar, FolderKanban } from 'lucide-react'
 import { FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from 'react-icons/fa6'
+import { FaFileAlt } from 'react-icons/fa'
 
 /**
  * Base CDN URL (fallback to production CDN if not provided)
@@ -29,6 +30,11 @@ export const siteConfig = {
             icon: FolderKanban,
             label: 'Project Showcase',
             href: 'https://fahli.dev/projects',
+        },
+        {
+            icon: FaFileAlt,
+            label: 'Download CV / Resume',
+            href: 'https://cdn.fahli.dev/files/cv/cv-muhammad-fahli-saputra-latest.pdf',
         },
         {
             icon: Medal,
